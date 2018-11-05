@@ -1,0 +1,5 @@
+# should-component
+
+## Usage
+```
+```
