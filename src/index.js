@@ -1,6 +1,5 @@
 // UI component
-export Helloworld from './ui/Helloworld'
-
+export Calendar from './ui/Calendar'
 // Utils
 export guid from './utils/guid'
 export shouldUpdate from './utils/shouldUpdate'
