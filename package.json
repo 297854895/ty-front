@@ -11,7 +11,7 @@
     "build": "npx babel --ignore=src/index.js src --out-dir lib & node ./scripts/copystyle.js",
     "build:lib": "npx babel --ignore=src/index.js src --out-dir lib",
     "build:style": "node ./scripts/copystyle.js",
-    "dev": "npx babel --ignore=src/index.js src -w --out-dir dist & node ./scripts/copystyle.js & node ./scripts/listenchange.js"
+    "dev": "npx babel --ignore=src/index.js src -w --out-dir lib & node ./scripts/copystyle.js & node ./scripts/listenchange.js"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
@@ -35,6 +35,7 @@
     "fs": "^0.0.1-security",
     "fs-extra": "^7.0.0",
     "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "webpack": "^4.25.1"
   },
   "devDependencies": {
