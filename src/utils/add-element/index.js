@@ -1,13 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-
 export default ({
+  mount,
   type,
-  component
+  attr
 }) => {
-  const DOM = document.createElement(type)
-  document.body.appendChild(DOM)
-  if (!component) return
-  const RenderComponent = component
-  ReactDOM.render(<RenderComponent />, DOM)
+  try {
+    const DOM = document.createElement(type)
+    if (attr && typeof attr === 'object') {
+      for (let key in attr) {
+        const val = attr[key]
+        DOM.setAttribute(key, val)
+      }
+    }
+    if (!mount || !mount.appendChild) return
+    mount.appendChild(DOM)
+    return DOM
+  } catch (e) {
+    console.error(e)
+  }
 }
